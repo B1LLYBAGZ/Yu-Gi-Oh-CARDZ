@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
       cardTitle.textContent = card.name;
 
       cardDetailsContainer.innerHTML = `
-                <img src="${card.card_images[0].image_url}" alt="${card.name}">
-                <p>Type: ${card.type}</p>
-                <p>Attack: ${card.atk}</p>
-                <p>Defense: ${card.def}</p>
-                <p>Level: ${card.level}</p>
-                <p>Description: ${card.desc}</p>
+                <img src="${card.card_images[0].image_url}" class="img-fluid mb-4" alt="${card.name}">
+                <p><strong>Type:</strong> ${card.type}</p>
+                <p><strong>Attack:</strong> ${card.atk}</p>
+                <p><strong>Defense:</strong> ${card.def}</p>
+                <p><strong>Level:</strong> ${card.level}</p>
+                <p><strong>Description:</strong> ${card.desc}</p>
             `;
     })
     .catch((error) => console.error("Error fetching card data:", error));

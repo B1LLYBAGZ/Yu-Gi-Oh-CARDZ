@@ -4,23 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yu-Gi-Oh! Card Viewer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
   </head>
   <body>
-    <header>
+    <header class="bg-dark text-white text-center py-3">
       <h1>Yu-Gi-Oh! Card Viewer</h1>
-      <div id="search-container">
-        <input
-          type="text"
-          id="search-input"
-          placeholder="Search for a card..."
-        />
-        <button id="search-button">Search</button>
+      <div id="search-container" class="my-3">
+        <div class="input-group">
+          <input
+            type="text"
+            id="search-input"
+            class="form-control"
+            placeholder="Search for a card..."
+          />
+          <div class="input-group-append">
+            <button id="search-button" class="btn btn-primary">Search</button>
+          </div>
+        </div>
       </div>
     </header>
-    <main>
-      <div id="card-container"></div>
+    <main class="container mt-4">
+      <div id="card-container" class="row"></div>
     </main>
     <script src="./assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

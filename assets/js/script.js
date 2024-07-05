@@ -23,14 +23,16 @@ document.addEventListener("DOMContentLoaded", () => {
     cardContainer.innerHTML = ""; // Clear existing cards
     cards.forEach((card) => {
       const cardElement = document.createElement("div");
-      cardElement.classList.add("card");
+      cardElement.classList.add("col-md-4", "mb-4");
       cardElement.innerHTML = `
-              <h2>${card.name}</h2>
-              <img src="${card.card_images[0].image_url}" alt="${card.name}">
+              <div class="card">
+                  <img src="${card.card_images[0].image_url}" class="card-img-top" alt="${card.name}">
+                  <div class="card-body">
+                      <h5 class="card-title">${card.name}</h5>
+                      <button class="btn btn-primary" onclick="window.location.href='card.html?cardId=${card.id}'">View Details</button>
+                  </div>
+              </div>
           `;
-      cardElement.addEventListener("click", () => {
-        window.location.href = `card.html?cardId=${card.id}`;
-      });
       cardContainer.appendChild(cardElement);
     });
   };
